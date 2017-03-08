@@ -1,4 +1,5 @@
 FROM debian:latest
+MAINTAINER eshizhan <eshizhan@126.com>
 
 EXPOSE 8080
 
