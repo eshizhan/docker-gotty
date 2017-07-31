@@ -8,7 +8,7 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
 
-RUN VERSION=v0.0.13 && \
+RUN VERSION=v1.0.0 && \
     curl -sLk https://github.com/yudai/gotty/releases/download/$VERSION/gotty_linux_amd64.tar.gz \
     | tar xzC /usr/local/bin
 
