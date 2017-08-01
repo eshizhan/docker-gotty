@@ -6,6 +6,12 @@ This a Debian based GoTTY docker image.
 ```
 docker run -it -p 8080:8080 eshizhan/gotty
 ```
+Or
+```
+docker run -d -p 8080:8080 eshizhan/gotty
+docker logs -f
+# watch the random url
+```
 default enabled options: **`--permit-write --random-url --reconnect /bin/bash`**
 ### Options
 ```
