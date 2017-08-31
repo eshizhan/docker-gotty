@@ -1,12 +1,13 @@
 FROM debian:latest
-MAINTAINER eshizhan <eshizhan@126.com>
+LABEL maintainer="eshizhan <eshizhan@126.com>"
 
 EXPOSE 8080
 
 RUN apt-get -y update && \
     apt-get install -y curl && \
+    apt-get purge --auto-remove -y curl && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists
+    rm -rf /var/lib/apt/lists*
 
 RUN VERSION=v1.0.0 && \
     curl -sLk https://github.com/yudai/gotty/releases/download/$VERSION/gotty_linux_amd64.tar.gz \
